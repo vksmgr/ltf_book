@@ -1,17 +1,11 @@
 import tensorflow as tf
-
-## this simply used to print the version of the tensorflow.
-print(tf.__version__)
+import models.linear_regression as lr
 
 
-## hello world example in tensorflow
+def main():
+    lr.runLR()
+    pass
 
-h = tf.constant("hello")
-w = tf.constant("world!")
 
-hw = h+w
-
-with tf.Session() as tfss:
-    ans = tfss.run(hw)
-
-print(ans)  
+if __name__ == '__main__':
+    main()
